@@ -1,0 +1,27 @@
+import React from 'react'
+import { stepsData } from '../assets/assets'
+
+const Steps = () => {
+  return (
+    <div className='flex flex-col items-center justify-center my-32'>
+      <h1 className='text-4xl sm:text-4xl font-semibold mb-2'>How we roll</h1>
+      <p className='text-lg mb-8 text-gray-600'>Transforming thoughts into astounding images</p>
+
+      <div className='space-y-4 w-full max-w-3xl text-sm'>
+        {stepsData.map((item, index)=>(
+            <div key={index}
+            className='flex items-center gap-4 p-5 px-8 bg-pink/20 shadow-md  cursor-pointer hover:scale-[1.02] transition-all duration-300 rounded-lg'>
+                <img width={40} src={item.icon}/>
+                <div>
+                    <h2 className='text-xl font-medium'>{item.title}</h2>
+                    <p className='text-gray-500'>{item.description}</p>
+                </div>
+            </div>
+        ))}
+      </div>
+
+    </div>
+  )
+}
+
+export default Steps
