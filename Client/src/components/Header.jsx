@@ -14,7 +14,7 @@ const Header = () => {
 
       <p className='text-sm max-w-[300px] sm:max-w-[590px] mx-auto mt-10 text-center'>Welcome to Just Imagine, where your words become art! Simply type a description of anything you can dream up—and our AI will bring it to life in a stunning, high-quality image. It's time to unleash your creativity and see what you can create.</p>
 
-      <button className='sm:text-lg text-white bg-pink-800 w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full '>
+      <button className='sm:text-lg text-white bg-pink-800 w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full hover:scale-105 transition-all duration-500'>
         See the magic
         <img className='h-6' src={assets.star_group} alt="" />
       </button>
