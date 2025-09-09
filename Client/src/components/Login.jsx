@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
+import { motion } from "motion/react"
 
 const Login = () => {
     const [state, setState] = useState('Login')
@@ -17,7 +18,11 @@ const Login = () => {
   return (
     <div className='fixed inset-0 z-50 left-0 right-0 top-0 bottom-0 backdrop-blur-sm bg-pink/30 flex justify-center items-center'>
       
-    <form className='relative bg-pink-100 p-10 rounded-xl text-slate-500'>
+    <motion.form className='relative bg-pink-100 p-10 rounded-xl text-slate-500'
+    initial={{opacity:0.2, y:100}}
+    transition={{duration:1}}
+    whileInView={{opacity: 1, y: 0}}
+    viewport={{once: true}} >
         <h1 className='text-center text-2xl text-neutral-700 font-medium'>{state}</h1>
 
         <p className='text-sm'>Welcome back! Please sign in to continue</p>
@@ -49,7 +54,7 @@ const Login = () => {
         <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" className='absolute top-5 right-5 cursor-pointer'/>
 
 
-    </form>
+    </motion.form>
 
     </div>
   )
