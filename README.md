@@ -14,7 +14,7 @@ It allows users to enter a text prompt, generate images using the [ClipDrop API]
 - Session management using **JWT tokens**.
 
 ### 💳 Credit System
-- Each new user starts with **10 free credits**.
+- Each new user starts with **5 free credits**.
 - Every image generation request deducts **1 credit**.
 - If credits run out, user cannot generate new images until more credits are added (future: buy credits with plans).
 
